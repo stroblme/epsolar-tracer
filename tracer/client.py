@@ -3,7 +3,7 @@
 # import the server implementation
 from pymodbus.client.sync import ModbusSerialClient as ModbusClient
 from pymodbus.mei_message import *
-from pyepsolartracer.registers import registerByName
+from .registers import registerByName
 
 #---------------------------------------------------------------------------#
 # Logging

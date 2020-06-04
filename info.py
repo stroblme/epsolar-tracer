@@ -1,6 +1,6 @@
 
-from pyepsolartracer.client import EPsolarTracerClient
-from pyepsolartracer.registers import registers,coils
+from tracer.client import EPsolarTracerClient
+from tracer.registers import registers,coils
 
 # configure the client logging
 import logging
