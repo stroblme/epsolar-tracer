@@ -8,13 +8,13 @@
 
 ## Hardware requirements
 
-EPEVER Tracer A(N) and BN solar charge controllers tested with current version:
+EPEVER Tracer A(N) or BN solar charge controller:
 
-[Product link 2](https://solarv.de/product-category/laderegeler/mppt/)
+[Product link 1](https://solarv.de/product-category/laderegeler/mppt/)
 
-You need RS-485 adapter for communication:
+RS-485 adapter for communication:
 
-[Product link 3](https://solarv.de/product/epever-laderegeler-kabel/)
+[Product link 2](https://solarv.de/product/epever-laderegeler-kabel/)
 
 ## Python module
 
