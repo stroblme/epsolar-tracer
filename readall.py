@@ -5,7 +5,8 @@ import time
 
 # import the server implementation
 #from pymodbus.client.sync import ModbusSerialClient as ModbusClient
-from test.testdata import ModbusMockClient as ModbusClient
+from pyepsolartracer.client import EPsolarTracerClient
+
 from pymodbus.mei_message import *
 from pyepsolartracer.registers import registers,coils
 
@@ -15,8 +16,10 @@ logging.basicConfig()
 log = logging.getLogger()
 log.setLevel(logging.DEBUG)
 
+serialclient = None
+
 # choose the serial client
-client = ModbusClient(method='rtu', port='/dev/ttyXRUSB0', baudrate=115200, stopbits = 1, bytesize = 8, timeout=1)
+client = EPsolarTracerClient(serialclient = serialclient)
 client.connect()
 
 request = ReadDeviceInformationRequest(unit=1)
@@ -50,5 +53,3 @@ for reg in coils:
         print "read_discrete_inputs:", str(rr.bits)
     else:
         print "read_discrete_inputs:", str(rr)
-
-

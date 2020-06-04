@@ -71,9 +71,7 @@ class EPsolarTracerClient:
             self.client.write_registers(register.address, values, unit = self.unit)
             response = True
         return response
-    
+
 __all__ = [
     "EPsolarTracerClient",
 ]
-
-    

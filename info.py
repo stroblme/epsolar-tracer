@@ -1,7 +1,6 @@
 
 from pyepsolartracer.client import EPsolarTracerClient
 from pyepsolartracer.registers import registers,coils
-from test.testdata import ModbusMockClient as ModbusClient
 
 # configure the client logging
 import logging
@@ -9,8 +8,7 @@ logging.basicConfig()
 log = logging.getLogger()
 log.setLevel(logging.INFO)
 
-serialclient = ModbusClient()
-#serialclient = None
+serialclient = None
 
 client = EPsolarTracerClient(serialclient = serialclient)
 client.connect()

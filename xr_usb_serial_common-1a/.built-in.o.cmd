@@ -1,0 +1,1 @@
+cmd_/media/stroblme/hauco/hauco_main/tests/epsolar-tracer/xr_usb_serial_common-1a/built-in.o :=  rm -f /media/stroblme/hauco/hauco_main/tests/epsolar-tracer/xr_usb_serial_common-1a/built-in.o; ar rcsD /media/stroblme/hauco/hauco_main/tests/epsolar-tracer/xr_usb_serial_common-1a/built-in.o
