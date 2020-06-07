@@ -18,6 +18,37 @@ class epsolar_tracer():
     def __del__(self):
         self.client.close()
 
+    def getDeviceInfo(self):
+        value = self.client.read_device_info()
+        return value
+
+    def getDeviceStatus(self):
+        value = self.client.read_input("Charging equipment status")
+        res = dict()
+        if int(value.value)<<0 & 1:
+            res['mode']='Running'
+        else:
+            res['mode']='Standby'
+
+        if int(value.value)<<1 & 1:
+            res['state']='Fault'
+        else:
+            res['state']='Normal'
+
+        if int(value.value)<<2 & 1:
+            if int(value.value)<<3 & 1:
+                res['charging']='Equalization'
+            else:
+                res['charging']='Float'
+        else:
+            if int(value.value)<<3 & 1:
+                res['charging']='Not Charging'
+            else:
+                res['charging']='Boost'
+
+
+        return res
+
     def getCurrentInputPower(self):
         value = self.client.read_input("Charging equipment input power")
         return value
