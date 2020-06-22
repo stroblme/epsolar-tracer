@@ -31,9 +31,9 @@ class epsolar_tracer():
             res['mode']='Standby'
 
         if int(value.value)<<1 & 1:
-            res['state']='Fault'
+            res['state']='Err'
         else:
-            res['state']='Normal'
+            res['state']='Ok'
 
         if int(value.value)<<2 & 1:
             if int(value.value)<<3 & 1:
